@@ -1,0 +1,14 @@
+<ion-content>
+
+  <app-transaction-item
+    *ngFor="let t of transactions"
+    [transaction]="t">
+  </app-transaction-item>
+
+</ion-content>
+<ion-item (press)="abrirEmoji(transaction)">
+  <ion-label>
+    {{ transaction.merchant }}
+    <p>{{ transaction.amount }}</p>
+  </ion-label>
+</ion-item>
